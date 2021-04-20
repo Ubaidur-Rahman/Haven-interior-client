@@ -1,38 +1,44 @@
-.App {
-  text-align: center;
+.component-title{
+    color: #96C346;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dashboard-title{
+    color: #96C346;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.custom-btn-style{
+    border: 1px solid #96C346;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 100px;
+    color: #203334;
+    text-transform: uppercase;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.custom-btn-style:hover{
+    background-color: #96C346;
+    color: rgb(255, 255, 255);
 }
-
-.App-link {
-  color: #61dafb;
+.custom-btn-bg{
+    background-color: #96C346;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 100px;
+    color: white;
+    text-transform: uppercase;
+    transition: .8s;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.custom-btn-bg:hover{
+    border: 1px solid #07051b;
+    color: #203334;
+}
+.card-bg:hover{
+    background-color: rgba(127, 255, 127, 0.836);
+    transition: 1s;
 }

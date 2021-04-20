@@ -1,0 +1,46 @@
+.divider:after,.divider:before {
+    content:"";
+    display:inline-block;
+    width:10%;
+    height:1px;
+    vertical-align:middle;
+    text-align: center;
+}
+.divider:after {
+    background-image:-webkit-linear-gradient(right,rgba(255,255,255,0),#6b6b6b);
+    margin-left:4px;
+}
+.divider:before {
+    background-image:-webkit-linear-gradient(left,rgba(255,255,255,0),#696969);
+    margin-right:4px;
+}
+
+
+.divider {
+    display: inherit;
+    text-align: center;
+    
+}
+
+.header-bg{
+    max-height: 700px;
+    width: 100%;
+    opacity: .6;
+}
+
+
+
+.box{
+    position: relative;
+    display: inline-block; /* Make the width of box same as image */
+}
+.box .text{
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: -20%;
+    right: 0;
+    top: 25%; /* Adjust this value to move the positioned div up and down */
+    text-align: center;
+    width: 60%; /* Set the width of the positioned div */
+}
