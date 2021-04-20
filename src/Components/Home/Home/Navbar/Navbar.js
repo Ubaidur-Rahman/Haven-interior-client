@@ -19,14 +19,18 @@ const Navbar = () => {
               <Link className="nav-link custom-nav-style ms-3 active" to="/home">Home</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link custom-nav-style ms-3" to="/about">About Us</Link>
+              <Link className="nav-link custom-nav-style ms-3" to="/dashboard">Dashboard</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link custom-nav-style ms-3" to="/blogs">Blogs</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link custom-nav-style ms-3" to="/projects">Projects</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link custom-nav-style ms-3" to="/dashboard">Dashboard</Link>
+              <Link className="nav-link custom-nav-style ms-3" to="/about">About Us</Link>
             </li>
+            
             <li className="nav-item">
               {
                 loggedInUser.name ? <img style={{ height: '50px', borderRadius: "50%" }} src={loggedInUser.photoURL} alt={loggedInUser.name} /> : <button className="btn login-btn w-100">

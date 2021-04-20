@@ -1,6 +1,6 @@
 .sidebar{
     background-color: #151414;
-    /* position: fixed; */
+    position: absolute;
 }
 .sidebar li{
     margin-bottom: 2em;

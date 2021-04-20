@@ -42,3 +42,12 @@
     background-color: rgba(127, 255, 127, 0.836);
     transition: 1s;
 }
+
+.sign-in-style{
+    height: 300px;
+   text-align: center;
+   justify-items: center;
+}
+.sign-in-style button{
+    
+}

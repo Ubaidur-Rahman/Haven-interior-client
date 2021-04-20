@@ -9,6 +9,7 @@ import AddATeamMember from './Components/DashBoard/AddATeamMember/AddATeamMember
 import AddReview from './Components/DashBoard/AddReview/AddReview';
 import AddService from './Components/DashBoard/AddService/AddService';
 import AdminOrderList from './Components/DashBoard/AdminOrderList/AdminOrderList';
+import BlankBook from './Components/DashBoard/Book/BlankBook';
 import Book from './Components/DashBoard/Book/Book';
 import BookingList from './Components/DashBoard/BookingList/BookingList';
 import MakeAnAdmin from './Components/DashBoard/MakeAnAdmin/MakeAnAdmin';
@@ -16,6 +17,7 @@ import ManageServices from './Components/DashBoard/ManageServices/ManageServices
 import SideBar from './Components/DashBoard/SideBar/SideBar';
 import Footer from './Components/Footer/Footer';
 import AboutUs from './Components/Home/AboutUs/AboutUs';
+import Blogs from './Components/Home/Blogs/Blogs';
 import Home from './Components/Home/Home/Home';
 import Navbar from './Components/Home/Home/Navbar/Navbar';
 import WorkGallery from './Components/Home/WorkGallery/WorkGallery';
@@ -46,6 +48,11 @@ function App() {
             <WorkGallery />
             <Footer />
           </Route>
+          <Route path="/blogs">
+            <Navbar />
+            <Blogs />
+            <Footer />
+          </Route>
           <Route path="/about">
             <Navbar />
             <AboutUs />
@@ -53,9 +60,11 @@ function App() {
           </Route>
           <PrivateRoute path="/dashboard">
             <SideBar />
+            <BlankBook />
           </PrivateRoute>
           <PrivateRoute path="/book">
-            <Book />
+            <SideBar />
+            <BlankBook />
           </PrivateRoute>
           <PrivateRoute path="/order/:_id">
             <Book />
