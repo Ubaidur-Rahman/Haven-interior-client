@@ -2,12 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Servicess = ({service}) => {
-
-
     const { _id } = service;
    
-
-    
     return (
         <div className="col-md-4 card-bg text-center">
         <div className="border m-2">
@@ -20,7 +16,7 @@ const Servicess = ({service}) => {
             <h6 className="text-dark">{service.description}</h6>
             
            </div>
-           <button className='btn custom-btn-bg' ><Link className="custom-link-style" to={`/order/${_id}`}>Buy Now</Link></button>
+           <Link className="custom-link-style" to={`/order/${_id}`}><button className='btn custom-btn-bg' >Buy Now</button></Link>
         </div></div>
     );
 };
