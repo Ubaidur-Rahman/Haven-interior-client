@@ -12,7 +12,7 @@ const AdminOrderList = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5055/orders')
+        fetch('https://guarded-peak-51076.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])

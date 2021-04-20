@@ -20,7 +20,7 @@ const AddService = () => {
             imageURL: imageURL
 
         };
-        const url = 'http://localhost:5055/addService'
+        const url = 'https://guarded-peak-51076.herokuapp.com/addService'
 
         console.log(serviceData)
         fetch(url, {

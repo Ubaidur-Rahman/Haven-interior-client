@@ -10,7 +10,7 @@ const ManageServices = () => {
     const [services, setServices] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5055/services')
+        fetch('https://guarded-peak-51076.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])

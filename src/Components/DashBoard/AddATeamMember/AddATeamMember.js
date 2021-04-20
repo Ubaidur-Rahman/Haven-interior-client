@@ -21,7 +21,7 @@ const AddATeamMember = () => {
         imageURL: imageURL
 
     };
-    const url = 'http://localhost:5055/addATeamMember'
+    const url = 'https://guarded-peak-51076.herokuapp.com/addATeamMember'
 
     console.log(teamMembersData)
     fetch(url, {

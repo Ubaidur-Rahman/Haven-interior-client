@@ -13,7 +13,7 @@ const Book = () => {
     const [services, setServices] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5055/services')
+        fetch('https://guarded-peak-51076.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
@@ -27,7 +27,7 @@ const Book = () => {
         const newOrder = { ...loggedInUser, ...service, orderTime , status: 'pending'};
         delete newOrder._id
 
-        fetch(`http://localhost:5055/addOrder`, {
+        fetch(`https://guarded-peak-51076.herokuapp.com/addOrder`, {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(newOrder)

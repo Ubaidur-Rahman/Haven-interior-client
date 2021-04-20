@@ -17,7 +17,7 @@ const AddReview = () => {
             description: data.description,
             companyName: data.companyName,
         };
-        const url = 'http://localhost:5055/addReview'
+        const url = 'https://guarded-peak-51076.herokuapp.com/addReview'
 
         console.log(reviewData)
         fetch(url, {
