@@ -3,7 +3,6 @@ import TeamMember from '../TeamMember/TeamMember';
 
 
 const AboutUs = () => {
-
     const [teamMembers, setTeamMembers] = useState([]);
 
     useEffect(() => {

@@ -11,8 +11,7 @@ import './Payment.css';
 // const stripePromise = loadStripe('pk_test_51IeIaaCCHH4mR9XurrK6BWJhOlYmc09P7N6beH0CFGHpfQoOFIKhQnda2d0QEtqyU18nQ43BVREgueEFLd3ucutz00UI7yC9Dt');
 
 const Payment = (props) => {
-  console.log(props.service.name)
-  const {name, price} = props.service;
+  console.log(props.service)
 
   const [loggedInUser, setLoggedInUser] = useContext(UserContext)
 
@@ -48,8 +47,8 @@ const Payment = (props) => {
       <input type="text" name="name" value={loggedInUser.name} />
       <label for="email"> <FontAwesomeIcon icon={faEnvelope} /> Email</label>
       <input type="text" name="email" value={loggedInUser.email} />
-      <input type="text" name="" value={name} />
-<h5>Your Service Charged will be $ {price}</h5>
+      <input type="text" name="" value={props.service?.name} />
+<h5>Your Service Charged will be $ {props.service?.price}</h5>
       <Link to="/booking-list" ><button onClick={props.handleOrder} className="btn custom-btn-bg">book now</button></Link>
     </div>
 
