@@ -30,7 +30,7 @@ const Blogs = () => {
     ]
     return (
 
-        <section className="blogs my-3">
+        <section className="blogs my-3 mb-5 p-5" style={{ backgroundColor: "#F4FDFB" }}>
             <div className="container">
                 <div className="section-header text-center">
                     <span className="divider component-title">Blogs</span>

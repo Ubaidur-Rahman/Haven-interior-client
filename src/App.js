@@ -23,71 +23,69 @@ import Login from './Components/Login/Login';
 import NoMatch from './Components/NoMatch/NoMatch';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
-export const UserContext = createContext(); 
+export const UserContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/home">
-          <Home />
-        </Route>
-        <Route path="/login">
-          <Login />
-        </Route>
-        <Route path="/projects">
-        <Navbar />
-          <WorkGallery />
-          <Footer />
-        </Route>
-        <Route path="/about">
-        <Navbar />
-        <AboutUs />
-          <Footer />
-        </Route>
-        <PrivateRoute path="/dashboard">
-          <SideBar />
-          
-        </PrivateRoute>
-        <PrivateRoute path="/book">
-          <Book />
-        </PrivateRoute>
-        <PrivateRoute path="/order/:_id">
-          <Book />
-        </PrivateRoute>
-        <PrivateRoute path="/makeAnAdmin">
-          <MakeAnAdmin />
-        </PrivateRoute>
-        <PrivateRoute path="/addATeamMember">
-          <AddATeamMember
-           />
-        </PrivateRoute>
-        <PrivateRoute path="/booking-list">
-          <BookingList />
-        </PrivateRoute>
-        <PrivateRoute path="/order-list">
-          <AdminOrderList />
-        </PrivateRoute>
-        <PrivateRoute path="/addService">
-          <AddService />
-        </PrivateRoute>
-        <PrivateRoute path="/addReview">
-          <AddReview />
-        </PrivateRoute>
-        <PrivateRoute path="/manage-services">
-          <ManageServices />
-        </PrivateRoute>
-        <Route path="/*">
-          <NoMatch />
-        </Route>
-      </Switch>
-    </Router>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/projects">
+            <Navbar />
+            <WorkGallery />
+            <Footer />
+          </Route>
+          <Route path="/about">
+            <Navbar />
+            <AboutUs />
+            <Footer />
+          </Route>
+          <PrivateRoute path="/dashboard">
+            <SideBar />
+          </PrivateRoute>
+          <PrivateRoute path="/book">
+            <Book />
+          </PrivateRoute>
+          <PrivateRoute path="/order/:_id">
+            <Book />
+          </PrivateRoute>
+          <PrivateRoute path="/makeAnAdmin">
+            <MakeAnAdmin />
+          </PrivateRoute>
+          <PrivateRoute path="/addATeamMember">
+            <AddATeamMember />
+          </PrivateRoute>
+          <PrivateRoute path="/booking-list">
+            <BookingList />
+          </PrivateRoute>
+          <PrivateRoute path="/order-list">
+            <AdminOrderList />
+          </PrivateRoute>
+          <PrivateRoute path="/addService">
+            <AddService />
+          </PrivateRoute>
+          <PrivateRoute path="/addReview">
+            <AddReview />
+          </PrivateRoute>
+          <PrivateRoute path="/manage-services">
+            <ManageServices />
+          </PrivateRoute>
+          <Route path="/*">
+            <NoMatch />
+          </Route>
+        </Switch>
+      </Router>
     </UserContext.Provider>
   );
 }

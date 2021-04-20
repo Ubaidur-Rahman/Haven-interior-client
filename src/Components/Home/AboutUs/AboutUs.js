@@ -14,20 +14,18 @@ const AboutUs = () => {
 
     return (
         <section className="blogs my-3">
-        <div className="container">
-            <div className="section-header text-center">
-                 <span className="divider component-title">
-            About Us
-         </span>
+            <div className="container">
+                <div className="section-header text-center">
+                    <span className="divider component-title">About Us</span>
+                </div>
+                <h5 className='text-dark text-center'>Our Hard Working Team Members</h5>
+                <div className="card-deck row mt-5">
+                    {
+                        teamMembers.map(member => <TeamMember member={member} key={member.name} />)
+                    }
+                </div>
             </div>
-            <h6 className='text-dark text-center'>Our Hard Working Team Member</h6>
-            <div className="card-deck row mt-5">
-                 {
-                    teamMembers.map(member => <TeamMember member={member} key={member.name}/>)
-                 }
-            </div>
-        </div>
-    </section>
+        </section>
     );
 };
 

@@ -48,7 +48,7 @@ const Payment = (props) => {
       <label for="email"> <FontAwesomeIcon icon={faEnvelope} /> Email</label>
       <input type="text" name="email" value={loggedInUser.email} />
       <input type="text" name="" value={props.service?.name} />
-<h5>Your Service Charged will be $ {props.service?.price}</h5>
+      <h5>Your Service Charged will be $ {props.service?.price}</h5>
       <Link to="/booking-list" ><button onClick={props.handleOrder} className="btn custom-btn-bg">book now</button></Link>
     </div>
 

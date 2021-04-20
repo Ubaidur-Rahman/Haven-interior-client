@@ -7,7 +7,6 @@ const SingleOrder = (props) => {
 
   const { status, name, description, orderTime, email } = props.order;
   const [selectedOption, setSelectedOption] = useState(null);
-  // const [selectValue, setSelectValue] = useState(null)
 
   const data = [
     {
@@ -23,21 +22,13 @@ const SingleOrder = (props) => {
       label: "Done"
     }
   ];
- 
-  // set value for default selection
-  
- 
-  // handle onChange event of the dropdown
   const handleChange = e => {
     setSelectedOption(e.value);
    
   }
  console.log(selectedOption)
 
-
   return (
-
-
 
     <tbody>
       <tr>

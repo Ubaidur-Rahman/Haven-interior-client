@@ -14,11 +14,6 @@ const Login = () => {
         firebase.initializeApp(firebaseConfig)
     }
 
-   
-
-
-
-
 
     const handleSignIn = () => { 
         const googleProvider = new firebase.auth.GoogleAuthProvider();

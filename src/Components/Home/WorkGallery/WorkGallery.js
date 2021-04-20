@@ -43,7 +43,7 @@ const WorkGallery = () => {
 
 
     return (
-        <div className="mt-5">
+        <div className=" my-3 mb-5 p-5" style={{ backgroundColor: "#F4FDFB" }}>
             <span className="divider component-title my-3">
                 Work Gallery
             </span>

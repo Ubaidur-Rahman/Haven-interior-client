@@ -14,10 +14,9 @@ const Testimonial = () => {
 
 
     return (
-        <div style={{ backgroundColor: "#F6F6F6" }}>
-            <span className="divider">
-                <h2 className='component-title'>Testimonial</h2>
-
+        <div className='p-5' style={{ backgroundColor: "#F6F6F6" }}>
+            <span className="divider component-title mb-5">
+                Testimonial
             </span>
             <div className="row">
                 {

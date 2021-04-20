@@ -18,10 +18,8 @@ const ManageSingleData = ({ service }) => {
             <div className="border m-2">
 
                 <img style={{ maxHeight: '50px' }} src={service.imageURL} alt="" />
-                <h5>Service Name: {service.name}</h5>
+                <h5>Service: {service.name}</h5>
                 <h6>Price: {service.price}</h6>
-
-
                 <button onClick={() => handleDeleteService(service._id)} className='btn custom-btn-bg' >Delete Service</button>
             </div></div>
     );

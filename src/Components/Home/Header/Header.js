@@ -29,7 +29,7 @@ const Header = () => {
                 </div>
             </div>
             <div>
-                <span className="divider component-title">
+                <span className="divider component-title my-5">
                     Our Services
             </span>
             <h4 className="text-dark text-center">Services We Provide</h4>

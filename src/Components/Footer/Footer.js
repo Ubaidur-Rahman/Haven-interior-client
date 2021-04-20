@@ -11,12 +11,10 @@ const Footer = () => {
         <footer className="footer-section">
         <div className="container-fluid p-3">
         <h2 className='text-center fs-2 component-title'>Get In Touch</h2>
-        
             <div className="footer-cta pt-5 pb-5">
                 <div className="row">
                     <div className="col-xl-4 col-md-4 mb-30">
                         <div className="single-cta">
-                            
                             <FontAwesomeIcon icon={faMapMarkerAlt} className='icon'/>
                             <div className="cta-text">
                                 <h4>Find us</h4>
@@ -27,7 +25,6 @@ const Footer = () => {
                     <div className="col-xl-4 col-md-4 mb-30">
                         <div className="single-cta">
                         <FontAwesomeIcon icon={faPhone} className='icon' />
-                            
                             <div className="cta-text">
                                 <h4>Call us</h4>
                                 <span>+8801234567890</span>
@@ -51,7 +48,7 @@ const Footer = () => {
                     <div className="col-xl-4 col-lg-4 mb-50">
                         <div className="footer-widget">
                             <div className="footer-logo">
-                                <a href="index.html"><img src={footerLogo} className="img-fluid" alt="logo" /></a>
+                                <a href="#"><img src={footerLogo} className="img-fluid" alt="logo" /></a>
                             </div>
                             <div className="footer-text">
                                 <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
