@@ -65,7 +65,8 @@ function App() {
           <MakeAnAdmin />
         </PrivateRoute>
         <PrivateRoute path="/addATeamMember">
-          <AddATeamMember />
+          <AddATeamMember
+           />
         </PrivateRoute>
         <PrivateRoute path="/booking-list">
           <BookingList />

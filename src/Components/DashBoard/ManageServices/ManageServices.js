@@ -1,8 +1,8 @@
-import React, { useContext, useEffect } from 'react';
-import { useState } from 'react/cjs/react.development';
+import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../../App';
 import ManageSingleData from '../ManageSingleData/ManageSingleData';
 import SideBar from '../SideBar/SideBar';
+
 
 const ManageServices = () => {
 

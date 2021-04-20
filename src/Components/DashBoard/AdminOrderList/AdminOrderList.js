@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
-import { useEffect, useState } from 'react/cjs/react.development';
+import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../../App';
 import SideBar from '../SideBar/SideBar';
 import SingleOrder from '../SingleOrder/SingleOrder';
+
 
 const AdminOrderList = () => {
 
