@@ -4,7 +4,7 @@ const ManageSingleData = ({ service }) => {
 
     const handleDeleteService = (id) => {
         console.log(id)
-        fetch("/delete/" + id, {
+        fetch("https://guarded-peak-51076.herokuapp.com/delete/" + id, {
             method: 'DELETE'
         })
             .then(res => res.json())
