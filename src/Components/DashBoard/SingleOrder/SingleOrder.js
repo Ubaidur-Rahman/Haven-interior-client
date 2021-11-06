@@ -1,32 +1,26 @@
 import React, { useState } from 'react';
-import Select from 'react-select';
 
 
 const SingleOrder = (props) => {
 
 
-  const { status, name, description, orderTime, email } = props.order;
+  const { status, name, description, orderTime, email, _id } = props.order;
   const [selectedOption, setSelectedOption] = useState(null);
 
-  const data = [
-    {
-      value: 'Pending',
-      label: "Pending"
-    },
-    {
-      value: 'OnGoing',
-      label: "OnGoing"
-    },
-    {
-      value: 'Done',
-      label: "Done"
-    }
-  ];
-  const handleChange = e => {
-    setSelectedOption(e.value);
-   
+
+  const [orderStatus, setOrderStatus] = useState(status)
+  const handleStatusChange = (e) => {
+    console.log('updating status..', e.target.value, _id)
+    setOrderStatus(e.target.value)
+    const newOrder = { status: e.target.value, id: _id }
+    fetch('http://localhost:5055/updateOrder', {
+      method: 'PATCH',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(newOrder)
+    })
+      .then(res => res.json())
+      .then(data => console.log(data))
   }
- console.log(selectedOption)
 
   return (
 
@@ -36,12 +30,16 @@ const SingleOrder = (props) => {
         <td className="text-dark">{name}</td>
         <td className="text-dark">{email}</td>
         <td>{orderTime}</td>
-        <td><Select
-        placeholder={status}
-        value={selectedOption} // set selected value
-        options={data} // set list of the data
-        onChange={handleChange} // assign onChange function
-      /></td>
+        <td>
+          <select style={{
+            color: status === 'Pending' ? 'red' :
+              status === 'Ongoing' ? 'orange' : 'green'
+          }} onChange={handleStatusChange} name="status" id="status" defaultValue={orderStatus}>
+            <option value="Pending">Pending</option>
+            <option value="Ongoing">Ongoing</option>
+            <option value="Done">Done</option>
+          </select>
+        </td>
       </tr>
 
     </tbody>

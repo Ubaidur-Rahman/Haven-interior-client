@@ -9,7 +9,10 @@ const SingleBooking = (props) => {
         <div className="d-flex justify-content-between">
         <div><img style={{ maxHeight: '100px' }} src={imageURL} alt=""/></div>
         <div>
-        <h6 style={{background: '#FFE3E3'}} className="text-danger rounded p-2 border border-danger shadow-lg">{status}</h6>
+        {
+            status === 'Done' ? <h6 style={{background: '#66AA75'}} className=" rounded p-2 border border-primary shadow-lg">{status}</h6> :  status === 'Ongoing' ? <h6 style={{background: '#FFE3E3'}} className="text- rounded p-2 border border-danger shadow-lg">{status}</h6> : <h6 style={{background: '#FFE3E3'}} className="text-dark text- rounded p-2 border border-danger shadow-lg">{status}</h6>
+        }
+       
         </div>
            
         </div>
