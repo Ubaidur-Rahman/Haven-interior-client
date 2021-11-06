@@ -35,7 +35,6 @@
     transition: .8s;
 }
 .custom-btn-bg:hover{
-    border: 1px solid #07051b;
     color: #203334;
 }
 .card-bg:hover{
@@ -47,7 +46,4 @@
     height: 300px;
    text-align: center;
    justify-items: center;
-}
-.sign-in-style button{
-    
 }

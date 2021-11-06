@@ -10,7 +10,7 @@ const SingleBooking = (props) => {
         <div><img style={{ maxHeight: '100px' }} src={imageURL} alt=""/></div>
         <div>
         {
-            status === 'Done' ? <h6 style={{background: '#66AA75'}} className=" rounded p-2 border border-primary shadow-lg">{status}</h6> :  status === 'Ongoing' ? <h6 style={{background: '#FFE3E3'}} className="text- rounded p-2 border border-danger shadow-lg">{status}</h6> : <h6 style={{background: '#FFE3E3'}} className="text-dark text- rounded p-2 border border-danger shadow-lg">{status}</h6>
+            status === 'Done' ? <h6 style={{background: '#4CBB17'}} className="text-white rounded p-2 border shadow-lg">{status}</h6> :  status === 'Ongoing' ? <h6 style={{background: '#FFE55C'}} className=" rounded p-2 border shadow-lg">{status}</h6> : <h6 style={{background: '#FF746C'}} className="rounded p-2 border shadow-lg">{status}</h6>
         }
        
         </div>

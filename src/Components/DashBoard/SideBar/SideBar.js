@@ -23,7 +23,7 @@ const SideBar = () => {
             body: JSON.stringify({ email: loggedInUser.email })
         })
             .then(res => res.json())
-            .then(data => setIsAdmin(data));
+            .then(data => console.log(data));
     }, [])
 
 
@@ -53,7 +53,7 @@ const SideBar = () => {
                         <FontAwesomeIcon icon={faComment} /> <span>Add a Review</span>
                     </Link>
                 </li>
-                {/* {isAdmin && <div> */}
+                {isAdmin && <div>
                     <li>
                         <Link to="/order-list" className="link-style">
                             <FontAwesomeIcon icon={faList} /> <span>Order List</span>
@@ -82,7 +82,7 @@ const SideBar = () => {
                             </Link>
                         </h5>
                     </li>
-                {/* </div>} */}
+                </div>}
             </ul>
             <div>
                 <Link to="/" className="link-style"><FontAwesomeIcon icon={faSignOutAlt} /> <span>Logout</span></Link>

@@ -13,7 +13,7 @@ const SingleOrder = (props) => {
     console.log('updating status..', e.target.value, _id)
     setOrderStatus(e.target.value)
     const newOrder = { status: e.target.value, id: _id }
-    fetch('http://localhost:5055/updateOrder', {
+    fetch('https://guarded-peak-51076.herokuapp.com/updateOrder', {
       method: 'PATCH',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(newOrder)
