@@ -2,7 +2,7 @@ import { faServicestack } from '@fortawesome/free-brands-svg-icons';
 import { faListAlt } from '@fortawesome/free-regular-svg-icons';
 import { faBook, faComment, faHome, faList, faPlus, faSignOutAlt, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import logo from '../../../images/logo black.jpg';
@@ -13,8 +13,9 @@ import './SideBar.css';
 
 const SideBar = () => {
 
-    const [loggedInUser, setLoggedInUser] = useState(UserContext);
-    const [isAdmin, setIsAdmin] = useState(false);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [isAdmin, setIsAdmin] = useState(null);
+    console.log(loggedInUser.email)
 
     useEffect(() => {
         fetch('https://guarded-peak-51076.herokuapp.com/isAdmin', {
@@ -23,7 +24,10 @@ const SideBar = () => {
             body: JSON.stringify({ email: loggedInUser.email })
         })
             .then(res => res.json())
-            .then(data => console.log(data));
+            .then(data => {
+                console.log(data)
+                setIsAdmin(data)
+            });
     }, [])
 
 
